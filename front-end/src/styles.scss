@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1 {
+    font-size: 24px;
+}
+
+/* Tabela */
+.mat-table {
+    width: 100%;
+}
+
+/* Botões editar e excluir */
+.mat-row .mat-icon-button {
+    opacity: 0.8;
+}
+
+.mat-row:hover .mat-icon-button {
+    opacity: 1;
+}
+
+/* Botão adicionar*/
+.espac10px {
+    width: 0;
+    margin: 0 5px;
+}
+
+/* Fundo "Toolbar" do botão adicionar */
+.list-toolbar {
+    background: transparent;
+    padding-left: 0 !important; 
+}
+
+/* Formulário*/
+.mat-form-field {
+    font-size: 12px;
+    width: 100%;
+}
+
+.espac20px {
+    width: 0;
+    margin: 0 10px;
+}
+
+.form-toolbar {
+    background: transparent;
+    justify-content: center;
+}
+
+.mat-header-cell {
+    text-align: center !important;
+}
+
+.mat-cell {
+    text-align: center !important;
+}
+
+
+
+//@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+//@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+//@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+@import "~material-design-icons/iconfont/material-icons.css";

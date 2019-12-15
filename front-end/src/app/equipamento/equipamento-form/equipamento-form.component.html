@@ -1,0 +1,20 @@
+<h1>{{ titulo }}</h1>
+
+<form #form="ngForm">
+
+  <mat-form-field>
+    <mat-label>Nome do Equipamento</mat-label>
+    <input matInput name="nome" required placeholder="Informe o nome do equipamento" [(ngModel)]="equipamento.nome" />
+  </mat-form-field>
+
+</form>
+
+<mat-toolbar class="form-toolbar">
+  <button mat-raised-button color="accent" (click)="salvar()">
+    Salvar
+  </button>
+  <span class="espac20px"></span>
+  <button mat-raised-button (click)="voltar(form)">
+    Voltar
+  </button>
+</mat-toolbar>

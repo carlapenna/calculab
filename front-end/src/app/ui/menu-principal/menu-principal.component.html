@@ -1,0 +1,17 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon class="example-icon" aria-hidden="false" aria-label="Menu principal">menu</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="instrumental">Análises Instrumentais</button>
+</mat-menu>
+
+<mat-menu #instrumental="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="uvvisivel">Espectrofotometria UV e Visível</button>
+</mat-menu>
+
+<mat-menu #uvvisivel="matMenu">
+    <a [routerLink]="['/padrao']" mat-menu-item>Padrões</a>
+    <a [routerLink]="['/amostra']" mat-menu-item>Amostras</a>
+    <a [routerLink]="['/equipamento']" mat-menu-item>Equipamentos</a>
+</mat-menu>

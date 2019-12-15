@@ -1,0 +1,67 @@
+<h1>{{ titulo }}</h1>
+
+<form #form="ngForm">
+
+  <mat-form-field>
+    <mat-label>Identificação</mat-label>
+    <input matInput name="identificacao" maxlength="50" required placeholder="Informe a identificação do padrão"
+      [(ngModel)]="padrao.identificacao" />
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Equipamento</mat-label>
+    <mat-select [(ngModel)]="padrao.equipamento" name="equipamento" placeholder="Selecione o equipamento" required>
+
+      <mat-option *ngFor="let equipamento of equipamentos" [value]="equipamento._id">
+        {{equipamento.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Comprimento de Onda</mat-label>
+    <input matInput name="compriOnda" maxlength="50" required placeholder="Informe o comprimento de onda do padrão"
+      [(ngModel)]="padrao.compriOnda" />
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Cubeta</mat-label>
+    <input matInput name="cubeta" maxlength="50" required placeholder="Informe o tamanho da cubeta" [(ngModel)]="padrao.cubeta" />
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Coeficiente de Absortividade</mat-label>
+    <input matInput name="coefAbsortividade" maxlength="50" required
+      placeholder="Informe o coeficiente de absortividade do padrão" [(ngModel)]="padrao.coefAbsortividade" />
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Diluições</mat-label>
+    <input matInput name="diluicaoP" maxlength="50" required
+      placeholder="Informe os valores das diluições do padrão (Separar por ';')" [(ngModel)]="padrao.diluicaoP" />
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Absorbâncias</mat-label>
+    <input matInput name="absorbanciaP" maxlength="50" required
+      placeholder="Informe os valores das absorbâncias do padrão (Separar por ';')" [(ngModel)]="padrao.absorbanciaP" />
+  </mat-form-field>
+
+</form>
+
+
+<mat-toolbar class="form-toolbar">
+  <button mat-raised-button color="accent" (click)="salvar()">
+    Salvar
+  </button>
+  <span class="espac20px"></span>
+  <button mat-raised-button (click)="voltar(form)">
+    Voltar
+  </button>
+</mat-toolbar>
